@@ -1,22 +1,8 @@
 [LTEモデム搭載プロトタイプ向けデバイス 「Wio LTE」](https://soracom.jp/products/wio_lte/) を用いたハンズオンテキストです
 
-
-※本ハンズオンは90分程度を見込みます （開発環境の準備は+60分です)
-1. [ Description. ](#desc)
-2. [ Usage tips. ](#usage)
-
-<a name="desc"></a>
-## 1. Description
-
-sometext
-
-<a name="usage"></a>
-## 2. Usage tips
-
-sometext
 ## 手順
 * [開発環境の準備](#開発環境の準備)
-    * [Wio LTE ハードウェア解説](#wio-lte-解説)
+    * [Wio LTE ハードウェア解説](#[Wio-LTE-ハードウェア解説])
 * [ハンズオン](#ハンズオン)
     * [ステップ 1: LED点灯](#作業-1-led点灯)
     * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](#作業-2-稼働時間-soracom-harvest-可視化)
