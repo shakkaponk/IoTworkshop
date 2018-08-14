@@ -4,18 +4,17 @@
 ※本ハンズオンは90分程度を見込みます （開発環境の準備は+60分です)
 
 ## 手順
-
 * [開発環境の準備](#開発環境の準備)
-    * [Wio LTE ハードウェア解説](wiolte-hardware)
-* [ハンズオン](handson)
-    * [ステップ 1: LED点灯](step1)
-    * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](step2)
-    * [ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化](step3)
-    * [ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して AWS IoT へ転送](step4)
-    * [ステップ 5: SORACOM Beam と Amazon MQ を用いた MQTT Pub/Sub 双方向通信](step5)
-    * [おわりに](end)
-* [Appendix(付録)](appendix)
-    * [ハンズオンで使用した環境の構築方法]()
+    * [Wio LTE ハードウェア解説](#wio-lte-解説)
+* [ハンズオン](#ハンズオン)
+    * [ステップ 1: LED点灯](#作業-1-led点灯)
+    * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](#作業-2-稼働時間-soracom-harvest-可視化)
+    * [ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化](#作業-3-温湿度-soracom-harvest-可視化)
+    * [ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して AWS IoT へ転送](#作業-4-温湿度-soracom-funnel-利用-sap-iot-services-転送)
+    * [ステップ 5: SORACOM Beam と Amazon MQ を用いた MQTT Pub/Sub 双方向通信](#作業-5-soracom-beam-sap-iot-services-用-mqtt-pubsub-双方向通信)
+    * [おわりに](#おわりに)
+* [Appendix(付録)](#appendix付録)
+    * [ハンズオンで使用した環境の構築方法](#使用環境構築方法)
 
 ## 準備するもの
 
