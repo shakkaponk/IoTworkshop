@@ -2,7 +2,18 @@
 
 
 ※本ハンズオンは90分程度を見込みます （開発環境の準備は+60分です)
+1. [ Description. ](#desc)
+2. [ Usage tips. ](#usage)
 
+<a name="desc"></a>
+## 1. Description
+
+sometext
+
+<a name="usage"></a>
+## 2. Usage tips
+
+sometext
 ## 手順
 * [開発環境の準備](#開発環境の準備)
     * [Wio LTE ハードウェア解説](#wio-lte-解説)
