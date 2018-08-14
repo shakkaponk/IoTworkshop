@@ -2,11 +2,11 @@
 
 ## 手順
 * [開発環境の準備](#開発環境の準備)
-    * [Wio LTE ハードウェア解説](#[Wio-LTE-ハードウェア解説])
+    * [Wio LTE ハードウェア解説](#wio-lte-ハードウェア解説)
 * [ハンズオン](#ハンズオン)
-    * [ステップ 1: LED点灯](#作業-1-led点灯)
-    * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](#作業-2-稼働時間-soracom-harvest-可視化)
-    * [ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化](#作業-3-温湿度-soracom-harvest-可視化)
+    * [ステップ 1: LED点灯](#作業ステップ-1-led点灯)
+    * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](#作業ステップ-2-デバイス稼働時間を-soracom-harvest-で可視化)
+    * [ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化](#作業ステップ-3-温湿度センサーのデータを-soracom-harvest-で可視化)
     * [ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して AWS IoT へ転送](#作業-4-温湿度-soracom-funnel-利用-sap-iot-services-転送)
     * [ステップ 5: SORACOM Beam と Amazon MQ を用いた MQTT Pub/Sub 双方向通信](#作業-5-soracom-beam-sap-iot-services-用-mqtt-pubsub-双方向通信)
     * [おわりに](#おわりに)
