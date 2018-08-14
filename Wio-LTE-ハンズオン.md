@@ -1,28 +1,21 @@
 [LTEモデム搭載プロトタイプ向けデバイス 「Wio LTE」](https://soracom.jp/products/wio_lte/) を用いたハンズオンテキストです
 
-# 概要
 
 ※本ハンズオンは90分程度を見込みます （開発環境の準備は+60分です)
 
 ## 手順
 
-* [開発環境の準備](#%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99)
-* [ハンズオン](#%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3)
-    * [Wio LTE ハードウェア解説](#%E7%9F%A5%E8%AD%98wio-lte-%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E8%A7%A3%E8%AA%AC)
-    * [Wio LTE と 添付されている microUSB ケーブルで PC と接続](#%E4%BD%9C%E6%A5%ADwio-lte-%E3%81%A8-%E6%B7%BB%E4%BB%98%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B-microusb-%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%A7-pc-%E3%81%A8%E6%8E%A5%E7%B6%9A)
-    * [Wio LTE の "通常モード" と "DFUモード"](#%E7%9F%A5%E8%AD%98wio-lte-%E3%81%AE-%E9%80%9A%E5%B8%B8%E3%83%A2%E3%83%BC%E3%83%89-%E3%81%A8-dfu%E3%83%A2%E3%83%BC%E3%83%89)
-    * [ステップ 1: LED点灯](#%E4%BD%9C%E6%A5%AD%E3%82%B9%E3%83%86%E3%83%83%E3%83%97-1-led%E7%82%B9%E7%81%AF)
-    * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](#%E4%BD%9C%E6%A5%AD%E3%82%B9%E3%83%86%E3%83%83%E3%83%97-2-%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E7%A8%BC%E5%83%8D%E6%99%82%E9%96%93%E3%82%92-soracom-harvest-%E3%81%A7%E5%8F%AF%E8%A6%96%E5%8C%96)
-    * [ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化](#%E4%BD%9C%E6%A5%AD%E3%82%B9%E3%83%86%E3%83%83%E3%83%97-3-%E6%B8%A9%E6%B9%BF%E5%BA%A6%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92-soracom-harvest-%E3%81%A7%E5%8F%AF%E8%A6%96%E5%8C%96)
-    * [ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して AWS IoT へ転送](#%E4%BD%9C%E6%A5%AD%E3%82%B9%E3%83%86%E3%83%83%E3%83%97-4-%E6%B8%A9%E6%B9%BF%E5%BA%A6%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92-soracom-funnel-%E5%88%A9%E7%94%A8%E3%81%97%E3%81%A6-aws-iot-%E3%81%B8%E8%BB%A2%E9%80%81)
-    * [ステップ 5: SORACOM Beam と Amazon MQ を用いた MQTT Pub/Sub 双方向通信](#%E4%BD%9C%E6%A5%AD%E3%82%B9%E3%83%86%E3%83%83%E3%83%97-5-soracom-beam-%E3%81%A8-amazon-mq-%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F-mqtt-pubsub-%E5%8F%8C%E6%96%B9%E5%90%91%E9%80%9A%E4%BF%A1)
-    * [おわりに](#%E3%81%8A%E3%82%8F%E3%82%8A%E3%81%AB)
-
-### Appendix(付録)
-
-* [ハンズオンで使用した環境の構築方法](#appendix%E4%BB%98%E9%8C%B2-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E7%92%B0%E5%A2%83%E3%81%AE%E6%A7%8B%E7%AF%89%E6%96%B9%E6%B3%95)
-    * [AWS IoT + IAM & Cognito](#aws-iot--iam--cognito)
-    * [Amazon MQ](#amazon-mq)
+* [開発環境の準備](prep)
+    * [Wio LTE ハードウェア解説](wiolte-hardware)
+* [ハンズオン](handson)
+    * [ステップ 1: LED点灯](step1)
+    * [ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化](step2)
+    * [ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化](step3)
+    * [ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して AWS IoT へ転送](step4)
+    * [ステップ 5: SORACOM Beam と Amazon MQ を用いた MQTT Pub/Sub 双方向通信](step5)
+    * [おわりに](end)
+* [Appendix(付録)](appendix)
+    * [ハンズオンで使用した環境の構築方法]()
 
 ## 準備するもの
 
@@ -50,17 +43,17 @@
     *  [SORACOM Air 料金](https://soracom.jp/services/air/cellular/price/)、[SORACOM Harvest 料金](https://soracom.jp/services/harvest/price/)、[SORACOM Beam 料金](https://soracom.jp/services/beam/price/)、[SORACOM Funnel 料金](https://soracom.jp/services/funnel/price/)
 * 本ドキュメントで発生した不具合等につきましては弊社は一切責任を負いません
 
+<a name="prep"></a>
 # 開発環境の準備
 
 Wio LTE を使うためには、開発環境の準備を行います  
 OS 毎に準備がありますので、下記を参照の上開発環境を準備してください
 
-* [Windows 編](https://github.com/soracom/handson/wiki/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89---Windows-%E7%B7%A8)
-* [macOS 編](https://github.com/soracom/handson/wiki/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-macOS-%E7%B7%A8)
+* [Windows 編](https://github.com/shakkaponk/IoTworkshop/blob/master/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89---Windows-%E7%B7%A8.md)
+* [macOS 編](https://github.com/shakkaponk/IoTworkshop/blob/master/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-macOS-%E7%B7%A8.md)
 
-# ハンズオン
-
-## 《知識》Wio LTE ハードウェア解説
+<a name="wiolte-hardware"></a>
+## Wio LTE ハードウェア解説
 
 Wio LTE は Seeed Studio が開発・販売しているマイコンモジュールです  
 Grove コネクタと STM32F4 マイコン、LTE Cat.1 モジュールが搭載されており、 Arduino IDE で素早くプロトタイピングができます
@@ -79,7 +72,7 @@ Grove コネクタと STM32F4 マイコン、LTE Cat.1 モジュールが搭載�
 
 ![Grove IoT スターターキット for SORACOM](https://docs.google.com/drawings/d/e/2PACX-1vT7i6svO5xJj56o0x1aUaW3qhkb4aCWynxSzbwVG3boCqe-TQooCC-qAm0Nfa3QBIb9YIum1G7Zkw-Z/pub?w=640&h=347)
 
-## 《知識》Wio LTE の電源ON/OFFの方法
+## Wio LTE の電源ON/OFFの方法
 
 Wio LTE には電源スイッチがありませんので、下記作業で ON / OFF してください
 
@@ -94,8 +87,8 @@ microUSB ケーブルを Wio LTE の microUSB ポートに接続すると自動�
 microUSB ケーブルを抜きます。いきなり抜いて OK です
 
 ※シャットダウン処理は存在しません
-
-## 《知識》Wio LTE の "通常モード" と "DFUモード"
+<a name="wiolte-modes"></a>
+## Wio LTE の "通常モード" と "DFUモード"
 
 Wio LTE は２つのモードを持っています
 **この操作は Wio LTE の開発で何度も行うことになりますので、必ず覚えてください**
@@ -117,15 +110,18 @@ Wio LTE の動作モードの確認の仕方は、環境構築の準備でご確
 * [Windows で Wio LTE の動作モードを変更する・確認する](https://github.com/soracom/handson/wiki/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89---Windows-%E7%B7%A8#wio-lte-%E3%81%AE-%E9%80%9A%E5%B8%B8%E3%83%A2%E3%83%BC%E3%83%89-%E3%81%A8-dfu%E3%83%A2%E3%83%BC%E3%83%89)
 * [macOS で Wio LTE の動作モードを変更する・確認する](https://github.com/soracom/handson/wiki/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-macOS-%E7%B7%A8#wio-lte-%E3%81%AE-%E9%80%9A%E5%B8%B8%E3%83%A2%E3%83%BC%E3%83%89-%E3%81%A8-dfu%E3%83%A2%E3%83%BC%E3%83%89)
 
+<a name="handson"></a>
+# ハンズオン
+<a name="step1"></a>
 # 【作業】ステップ 1: LED点灯
 
 Wio LTE ライブラリに付属しているスケッチ例から、内蔵のLEDを点灯してみましょう
 
 ※Wio LTE 開発ツールの使い方を学びます
 
-![ステップ1 ovewview](https://docs.google.com/drawings/d/e/2PACX-1vQuxiAIWQlqEF0aIgIZtYGemOl7BFPnqKTU3WxKbyk3F8PG0zkhYBWUrVUpJyq8LDqzQwAiBMFUxPKD/pub?w=371&h=247)
+![ステップ1 overview](https://docs.google.com/drawings/d/e/2PACX-1vQuxiAIWQlqEF0aIgIZtYGemOl7BFPnqKTU3WxKbyk3F8PG0zkhYBWUrVUpJyq8LDqzQwAiBMFUxPKD/pub?w=371&h=247)
 
-## 最初に. Wio LTE の電源を OFF にする
+## 最初に Wio LTE の電源を OFF にする
 
 Wio LTE の microUSB ケーブルを抜き、電源を OFF にしてください
 
@@ -247,7 +243,7 @@ DFU end
 
 * 原因: macOS で libusb がインストールされていない
 * 対策: [Wio LTE 開発環境の準備 / libusb のインストール](https://github.com/soracom/handson/wiki/Wio-LTE-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-macOS-%E7%B7%A8#libusb)を参照して libusb をインストールしてから、再度「マイコンボードに書き込む」を実行してください
-
+<a name="step2"></a>
 # 【作業】ステップ 2: デバイス稼働時間を SORACOM Harvest で可視化
 
 Wio LTE の稼働時間を SORACOM Harvest で可視化してみましょう
@@ -400,7 +396,7 @@ SIM の取り出し方も一緒に紹介いたします
 また、Arduino IDE のシリアルモニターで接続やデータ送信状況が確認できます
 
 ※注意: Windows の Arduino IDE のシリアルモニタは、 Wio LTE 開発においては動作が不安定になることがあるため、Windows の方は TeraTerm を使用してください
-
+<a name="step3"></a>
 # 【作業】ステップ 3: 温湿度センサーのデータを SORACOM Harvest で可視化
 
 デジタル温湿度センサーのデータを SORACOM Harvest で可視化してみましょう
@@ -490,13 +486,13 @@ SORACOM Harvest 上で温度(temp)・湿度(humi)が表示されるようにな�
 ![harvest-exclude-plot](https://docs.google.com/drawings/d/e/2PACX-1vRa8wgI9GtmrCNPLiKhwF6o-tkCTg4QBC3xUBY_nxK3urV4B0r0b5yEsSLWjIy88tJJKAwCQYJVcvGm/pub?w=634&h=300)
 
 ![harvest-alt-plot](https://docs.google.com/drawings/d/e/2PACX-1vR_nFPgaTosGb5Ywy0KsNp6d7yP1MHkMcM6uUqT8fuw4WMdsSTn3fct1izl6MjEmeWLDq6yi3_5lnwW/pub?w=731&h=306)
+<a name="step4"></a>
+# 【作業】ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して SAP IoT Services へ転送
 
-# 【作業】ステップ 4: 温湿度センサーのデータを SORACOM Funnel 利用して AWS IoT へ転送
+本格的なデータ収集 IoT システムの構築として、クラウド側のデータ処理に SAP IoT Services を活用する構成を学びます
 
-本格的なデータ収集 IoT システムの構築として、クラウド側のデータ処理に AWS IoT を活用する構成を学びます
-
-※本ハンズオンでは AWS IoT までとしていますが、下図は実際のシステム構成例として[IoT向けアーキテクチャパターン](https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-2017-iot/34)を盛り込んでいます
-
+※本ハンズオンでは SAP IoT Services までとしていますが、下図は実際のシステム構成例として[IoT向けアーキテクチャパターン](https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-2017-iot/34)を盛り込んでいます
+# <<<<<<<<<<<要編集>>>>>>>>>>>
 ![ステップ4 overview](https://docs.google.com/drawings/d/e/2PACX-1vRkHbjrlzpsr2HX34VyZsQIdlx5m7_BjbA-k3tiHmhkLh9OqbzXvuVLiOY3M6ZPwezpwKcMyU8cxnUH/pub?w=997&h=275)
 
 ## 最初に. Wio LTE の電源を OFF にする
@@ -548,83 +544,167 @@ Wio LTE の microUSB ケーブルを抜き、電源を OFF にしてください
 * Wio LTE に取り付けている SIM を選択 > [操作] > [所属グループ変更]
 * 先ほど作成した SIMグループ に所属させる
 
-## 3. スケッチを作成する
+## 3. SAP IoT Servicesを設定する
 
-### 3-1. Arduino IDE を起動する
+SAP Cloud Platform IoT services Cockpitにアクセスする
+```
+https://<HOST_NAME>/iot/cockpit/
+```
+今回使うインスタンスがこちらです：https://coil.eu10.cp.iot.sap/iot/cockpit/
 
-### 3-2. メニューの [ツール] で [ボード: "Wio Tracker LTE"] と表示されていることを確認する
+講師に伝えられたログイン・パスワードでCockpitにアクセスしてください
+![awsiot-monitor](https://docs.google.com/drawings/d/e/2PACX-1vRJyT93F0VK2jYSPQ4izxXEjiJhWQHKZJJr90U3VeX5_WCLfdmVftP5v_rrmYIX5ZXWnD9dLwsYzWdY/pub?w=928&h=367)
+
+
+### 3-1. Capabilityを作る
+Device ManagementカテゴリーのCapabilitiesを押下する    
+ **+ (Create a capability)** でCapabilityを作成する
+
+**Name:** climate   
+**Alternate ID:** (任意)
+
+Propertiesセクションでプロパティを二つ追加する。Add a propertyボタンを押す
+
+**Name:** temperature  
+**Data Type:** float
+
+**Name:** humidity  
+**Data Type:** float    
+
+Unit of Measureは入れなくてもいいです。
+
+Createを押して、capabilityが正しく生成されたメッセージが表示される。
+
+### 3-2. SensorTypeを作る
+Device ManagementカテゴリーのSensor Typesを押下する    
+ **+ (Create a sensor type)** でSensor typeを作成する
+
+**Name:** climate_sensor_type   
+**Alternate ID:** (任意)
+
+CapabilitiesセクションでAdd a capabilityボタンを押す
+
+**Name:** ドロップダウンで先ほど作ったCapabilityを選択する  
+**Type:** measure
+
+Createを押して、sensor typeが正しく生成されたメッセージが表示される。
+
+### 3-3. MQTT Deviceを作る
+Device ManagementカテゴリーのDevicesを押下する    
+ **+ (Create a device)** でdeviceを作成する
+
+**Name:** climate_device   
+**Gateway:** IoT Gateway MQTT   
+**Alternate ID:** (任意)
+
+Createを押して、deviceが正しく生成されたメッセージが表示される。
+
+
+### 3-4. Sensorを作る
+Device ManagementカテゴリーのDevicesを押下する   
+先ほど作ったdeviceをクリックする    
+ **+ (Create a sensor)** でsensorを作成する
+
+**Name:** climate_sensor1   
+**Sensor Type:** ドロップダウンで先ほど作ったSensor Typeを選択する   
+**Alternate ID:** (任意)
+
+Createを押して、sensorが正しく生成されたメッセージが表示される。
+
+
+### 3-5.Paho を使う場合は Device Certificateを生成する
+続きはこちら：
+Send data with MQTT
+https://help.sap.com/viewer/e765b2a5b99540ce84da397c20cc1993/Cloud/en-US
+
+
+
+## 4. スケッチを作成する
+
+### 4-1. Arduino IDE を起動する
+
+### 4-2. メニューの [ツール] で [ボード: "Wio Tracker LTE"] と表示されていることを確認する
 
 なっていなければ一覧から "Wio Tracker LTE" を選んでください
 
-### 3-3. Arduino IDE の [ファイル] > [スケッチ例] > [Wio LTE for Arduino] > [soracom] > [soracom-harvest]
+### 4-3. mqtt-client.ino を Arduino IDEで立ち上げる
 
-※上記の通り新規に始めても、ステップ3 の続きから始めても構いません
 
-### 3-4. スケッチの7行目の行頭 `//` を取り除きます (アンコメント)
-
-7行目が下記の通りになっていることを確認してください。なっていない場合は先頭の `//` を取り除いて、下記と同じようにしてください
-
-```
-#define SENSOR_PIN    (WIOLTE_D38)
-```
-
-### 3-5. スケッチの69行目の `harvest.soracom.io` と `8514` の2か所を `funnel.soracom.io` と `23080` へ変更します
+### 4-4. スケッチを編集して、先ほど設定したendpointと合わせる
 
 変更前
 
 ```
-  connectId = Wio.SocketOpen("harvest.soracom.io", 8514, WIOLTE_UDP);
+// 定数
+#define capabilityAlternateId  "9ae29168b5ae2233"
+#define sensorAlternateId      "2a58771a9b9efe26"
+
+#define APN               "soracom.io"
+#define USERNAME          "sora"
+#define PASSWORD          "sora"
+
+#define MQTT_SERVER_HOST  "beam.soracom.io"
+#define MQTT_SERVER_PORT  (1883)
+
+#define ID                "ab69d565671f1846"
+#define OUT_TOPIC         "measures/ab69d565671f1846"
+#define IN_TOPIC          "commands/ab69d565671f1846"
 ```
 
 変更後
 
 ```
-  connectId = Wio.SocketOpen("funnel.soracom.io", 23080, WIOLTE_UDP);
+// 定数
+#define capabilityAlternateId  "定義したId"
+#define sensorAlternateId      "定義したId"
+
+#define APN               "soracom.io"
+#define USERNAME          "sora"
+#define PASSWORD          "sora"
+
+#define MQTT_SERVER_HOST  "beam.soracom.io"
+#define MQTT_SERVER_PORT  (1883)
+
+#define ID                "定義したdevice AtlernateId"
+#define OUT_TOPIC         "measures/定義したdevice AtlernateId"
+#define IN_TOPIC          "commands/定義したdevice AtlernateId"
 ```
 
-### 3-6. Wio LTE と PC を接続して DFUモード にする
+### 4-5. Wio LTE と PC を接続して DFUモード にする
 
-### 3-7. 新しく開いたウィンドウの ![マイコンボードに書き込むアイコン](https://docs.google.com/drawings/d/e/2PACX-1vQiO83cFcX3LCXeioiTiaao57T4SGiIV6XZzcBP6poTwssCxmo7hLpoMh5qG3btyqgzs8Q-lAoE6Q0f/pub?w=100&h=100)(マイコンボードに書き込む) をクリック
+### 4-6. 新しく開いたウィンドウの ![マイコンボードに書き込むアイコン](https://docs.google.com/drawings/d/e/2PACX-1vQiO83cFcX3LCXeioiTiaao57T4SGiIV6XZzcBP6poTwssCxmo7hLpoMh5qG3btyqgzs8Q-lAoE6Q0f/pub?w=100&h=100)(マイコンボードに書き込む) をクリック
 
-### 3-8. 書き込みが完了したら、Wio LTE を 通常モードにする (RSTボタンを押せば通常モードになります)
+### 4-7. 書き込みが完了したら、Wio LTE を 通常モードにする (RSTボタンを押せば通常モードになります)
 
 通常モードで起動次第 SORACOM Funnel へデータを送信し始めます (電源投入から送信開始までは15~20秒程度かかります)
 
 ※標準では送信間隔が60秒です。早めたい場合は ステップ2 のやってみようを参考に `INTERVAL` を `5000` などに変えてください
 
-## 4. 確認
+## 5. デバイスからデータが正しく届いているか確認
 
-AWS IoT 上でのデータ着信は、運営側で行います  
-Wio LTE に挿した SIM の IMSI を運営に伝えてください。 IMSI は SORACOM Web コンソールで確認することができます
+デバイスからデータが正しく送られているのか、SAP Cloud Platform IoT services cockpitから確認する
 
-正しく送信されていれば、運営側で表示している AWS IoT のデータモニターツールに表示されます
-
-![awsiot-monitor](https://docs.google.com/drawings/d/e/2PACX-1vQLUnbGaPEdoizpw123ZhE2YB0P8PDFU2B-hrZ-R-OExdtZ971ijcz1gBXazAElVcXI2-mhpWVmQT--/pub?w=620&h=462)
-
-## 4. Wio LTE の動作を止める
+## 6. Wio LTE の動作を止める
 
 止める方法は Wio LTE の電源を OFF (= microUSBケーブルを抜く) してください
 
 ## うまく動かなかったら（トラブルシュート）
 
 利用可能なツールは「シリアルモニター」「SORACOM Webコンソール上のSIMのログ」です  
-※運営側は CloudWatch や AWS IoT ダッシュボードも利用できます
 
 **(シリアルモニターを見ると) 1回しかデータを送っていない**
 
 * 原因: SORACOM Funnel へのホスト名やポート番号が違う
     * 対策: スケッチ69行目の SORACOM Funnel へのホスト名やポート番号を確認し、再度マイコンへ書き込んでください
 
-**データは送られているが AWS IoT 上で確認できない**
+**データは送られているがクラウド上で確認できない**
 
 * 原因: SORACOM Funnel が ON なグループに SIM が所属していない
     * 対策: SIM を SIM グループへ所属させるようにしてください
-
-# 【作業】ステップ 5: SORACOM Beam と Amazon MQ を用いた MQTT Pub/Sub 双方向通信
+<a name="step5"></a>
+# 【作業】ステップ 5: SORACOM Beam と SAP IoT Services を用いた MQTT Pub/Sub 双方向通信
 
 本格的な IoT システムの構築として、データ収集だけでなく、クラウド側からのデータをデバイス側で受信の仕組みを学びます
-
-![ステップ5 全体構成](https://docs.google.com/drawings/d/e/2PACX-1vTxdhoBwbZGPH5WKQp6_BPQTzDPCzLWDS7nR46xgsqHLRzH6o44YwmJeOXHnRAd0gAOcgN3bX-AFDE1/pub?w=920&h=244)
 
 ## 最初に. Wio LTE の電源を OFF にする
 
@@ -780,22 +860,24 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 ```c
 void callback(char* topic, byte* payload, unsigned int length) {
-  char c[length];
+  char c[length + 1];
   for (int i = 0; i < length; i++) c[i] =  (char) payload[i];
+  c[length] = 0;
   SerialUSB.print("Subscribe:");
   SerialUSB.println(c);
-  unsigned long r = 0;
-  unsigned long g = 0;
-  unsigned long b = 0;
-  if ('#' == c[0] && length == 7) {
-    char rx[2] = {c[1], c[2]};
+  char *pos = strchr(c, '#');
+  if (pos != NULL) {
+    unsigned long r = 0;
+    unsigned long g = 0;
+    unsigned long b = 0;
+    char rx[3] = {pos[1], pos[2], 0};
     r = strtoul(rx, NULL, 16);
-    char gx[2] = {c[3], c[4]};
+    char gx[3] = {pos[3], pos[4], 0};
     g = strtoul(gx, NULL, 16);
-    char bx[2] = {c[5], c[6]};
+    char bx[3] = {pos[5], pos[6], 0};
     b = strtoul(bx, NULL, 16);
+    Wio.LedSetRGB(r, g, b);
   }
-  Wio.LedSetRGB(r, g, b);
 }
 ```
 
@@ -840,7 +922,7 @@ exit status 1
 * 対策: 下記手順を実施してみてください
     1. (Wio LTE の電源が入ったままで) SORACOM Webコンソール上で、当該の SIM のセッションを切断
     2. Wio LTE を再起動 (RST ボタンなど)
-
+<a name="end"></a>
 # おわりに
 
 おつかれさまでした  
@@ -905,74 +987,6 @@ Wio LTE を初期化しておくことで、次回起動時に不用意な通信
 * アンテナは取り外して Wio LTE 本体が格納されていた白いトレーのミゾに入れてください
 * microUSB ケーブルは白いトレーを取り外した中に入れてください
 
-### 本コンテンツについて
-
-TBD
-
-# Appendix(付録): ハンズオンで使用した環境の構築方法
-
-## AWS IoT + IAM & Cognito
-
-* IAM
-    * IAM で専用ユーザ作成 (e.g. `awsiot-dataaccess`)
-    * *awsiot-dataaccess* の Access Key ID 発行
-    * *awsiot-dataaccess* へ *AWSIoTDataAccess* ポリシー割り当て
-* Cognito (AWS IoT Monitor を利用する場合のみ)
-    * AWS IoT と同じリージョンに対し ID プール作成
-        * 作成時に *認証されていない ID に対してアクセスを有効にする* を ON にする
-    * IAM に移動、先ほど作成した ID プールに割り当てられている *認証されていないロール* に対して *AWSIoTDataAccess* ポリシーを割り当て
-* AWS IoT
-    * [設定] でカスタムエンドポイントを入手
-    * 特に設定不要だが、CloudWatch Log は ON にしておいた方がトラブルシュートに役立ちます
-
-## Amazon MQ
-
-https://qiita.com/ma2shita/items/bfdd99a5b99c6baaba82
-
-# 運営の方へ
-
-これらを準備
-
-* aws-accesskey-id
-* aws-secret-accesskey-id
-* endpoint-url
-* amazonmq-host
-* amazonmq-port
-* amazonmq-username
-* amazonmq-password
-* mqtt-iid
-* mqtt-pub-topic
-* mqtt-sub-topic
-* ws-address
-* ws-sub-topic
-* ws-pub-topic
-
-## ステップ4
-
-[AWS IoT Monitor](https://ma2shita.s3.amazonaws.com/awsiot.html) を使ったり、AWS IoT 管理画面のテストツールを使ってください
-
-### トラブルシュート
-
-* IAM 確認
-    * IAM アカウントに紐づいている Access Key ID
-    * IAM アカウントへの割り当てポリシー ( AWSIoTDataAccess ポリシーが必要 )
-* AWS IoT 確認
-    * カスタムエンドポイント (リージョン違い等)
-    * トピック名
-* [AWS IoT Monitor](https://ma2shita.s3.amazonaws.com/awsiot.html) 使用時の確認
-    * Cognito と AWS IoT のリージョン
-    * ID プールの ID
-    * 認証されていないロールへの割り当てポリシー ( AWSIoTDataAccess ポリシーが必要 )
-    * トピック名
-
-## ステップ5
-
-### トラブルシュート
-
-* Amazon MQ 確認
-    * エンドポイントアドレス
-    * ブローカに割り当てられた セキュリティグループの allow ポート番号
-    * ブローカ上のユーザ名/パスワード
-        * 変更時におけるブローカーの再起動
-
-EoT
+<a name="appendix"></a>
+# Appendix(付録):
+##ハンズオンで使用した環境の構築方法

@@ -128,38 +128,31 @@ DFUモードへの切り替え方は、このページの前半で確認して�
 
 ![Windows DFUモードの時のデバイスマネージャの表示](https://dev.soracom.io/img/gs_wio-lte/basic-dfu-win.png)
 
-## 3. TeraTerm
-
-Wio LTE からのシリアルコンソールを読み書きするためのソフトウェアです  
-※Wio LTE 開発の際、Arduino IDE 標準搭載のシリアルモニターは動作が不安定になることがあるため、TeraTermを利用するようにしてください
-
-検索エンジンで TeraTerm を探し、ダウンロードとインストールを行ってください
-
-## 4. Arduino IDE
+## 3. Arduino IDE
 
 Wio LTE の開発（ソースコード記述、コンパイル、バイナリファイル転送）には、Arduino IDEを利用します。 Arduino のサイトから [Arduino IDE をダウンロード](https://www.arduino.cc/en/main/software)し、表記に従ってインストールしてください
 
-### 4-1. ダウンロード
+### 3-1. ダウンロード
 
 ![download-arduino](https://docs.google.com/drawings/d/e/2PACX-1vTOGgidIrsQ6NwO4fGlVHHaO_7kHsxBDDq-GzoFM-yZlvDHfjrSXvakwLhTZsYwyE6BTDcVDc4oJ01m/pub?w=841&h=544)
 
 ![arduino-ide-download-justdownload](https://docs.google.com/drawings/d/e/2PACX-1vSxk2FHGBqwe5MmiLxMCaJsXfruEOcZH8I_evvvE6jOiuXOKvs2o9Sj7WvG5i7n_-dK8nhZcpd6stgp/pub?w=745&h=472)
 
-### 4-2. インストール
+### 3-2. インストール
 
 * ダウンロードした EXE ファイルをダブルクリックしてセットアップを開始してください
 
 ※スタートメニュー内の **Arduino** が「Arduino IDE」です。これをダブルクリックで Arduino IDE を起動することになります
 
-## 5. ボード定義のインストール
+## 4. ボード定義のインストール
 
 Wio LTE を Arduino IDE で扱えるようにするための機能を追加します
 
-### 5-1. Arduino IDE を起動する
+### 4-1. Arduino IDE を起動する
 
 スタートメニュー内の **Arduino** をダブルクリックします
 
-### 5-2. Arduino IDE の [ファイル] > [環境設定]  
+### 4-2. Arduino IDE の [ファイル] > [環境設定]  
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vRfOPHq6O844LQMs1CAdR-FpQ6-fKCaZux-OP42_GWksmxDcj6SFrcefLhuNiEsgPr9UPtn9EnTIAAK/pub?w=285&amp;h=387">
 
@@ -171,24 +164,29 @@ https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_see
 
 ![追加の様子](https://docs.google.com/drawings/d/e/2PACX-1vRato9UW98VRjlt3A6oDULm9GTattfeIAdyBse9DnNduv1ZnoOBmJCBW_ZNB5aeGsv3qofMQZS7HcXj/pub?w=723&h=625)
 
-### 5-3. メニューの [ツール] > [ボード] > [ボードマネージャ]
+### 4-3. メニューの [ツール] > [ボード] > [ボードマネージャ]
 
 一覧の中から **Seeed STM32F4 Boards by Seeed Studio** を選択しインストールをクリックします  
 ※ `seeed stm32` で検索すると見つけやすいです
 
 ![インストールの様子](https://github.com/SeeedJP/WioLTEforArduino/wiki/img-ja/2.png)  
 
-## 6. Wio LTE ライブラリのインストール
+
+## 5. Wio LTE ライブラリのインストール
 
 実際のプログラム（Arduino では スケッチと称します）で Wio LTE が使えるようにするライブラリを追加します
 
-### 6-1. Arduino IDE を起動する
+### 5-1. Arduino IDE を起動する
 
-### 6-2. Arduino IDE の [スケッチ] > [ライブラリをインクルード] > [ライブラリを管理…]
+### 5-2. Arduino IDE の [スケッチ] > [ライブラリをインクルード] > [ライブラリを管理…]
 
 一覧の中から **Wio LTE for Arduino** を選択しインストールをクリックします  
 ※ `wio lte` で検索すると見つけやすいです
 
+一覧の中から **ArduinoJson** を選択しインストールをクリックします  
+
+一覧の中から **PubSubClient** を選択しインストールをクリックします  
+
 ## 以上で環境構築は終了です  
 
-[Wio LTE ハンズオン](https://github.com/soracom/handson/wiki/Wio-LTE-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3)にお進みください
+[Wio LTE ハンズオン](https://github.com/shakkaponk/IoTworkshop/blob/master/Wio-LTE-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3.md)にお進みください
